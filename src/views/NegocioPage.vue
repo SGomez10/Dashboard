@@ -8,15 +8,13 @@
           <ion-title>Dashboard</ion-title>
         </ion-toolbar>
       </ion-header>
-   
-   
+
       <ion-content :fullscreen="true" class="ion-padding">
         <ion-header collapse="condense">
           <ion-toolbar>
             <ion-title size="large">Dashboard</ion-title>
           </ion-toolbar>
         </ion-header>
-   
    
         <ion-grid class="custom-dashboard">
           <!-- Fila 1: 2 columnas -->
@@ -112,9 +110,3 @@
     min-height: 200px;
    }
    </style>
-   
-   
-   
-   
-   
-   
