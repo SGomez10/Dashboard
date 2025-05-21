@@ -5,7 +5,7 @@
           <ion-buttons slot="start">
             <ion-menu-button color="primary"></ion-menu-button>
           </ion-buttons>
-          <ion-title>🎯 KPIs</ion-title>
+          <ion-title>KPIs</ion-title>
         </ion-toolbar>
       </ion-header>
   
@@ -13,12 +13,12 @@
       <ion-content :fullscreen="true" class="ion-padding">
         <ion-header collapse="condense">
           <ion-toolbar>
-            <ion-title size="large">🎯 KPIs</ion-title>
+            <ion-title size="large">KPIs</ion-title>
           </ion-toolbar>
         </ion-header>
   
   
-        <h1 class="ion-padding">🚀 KPIs de Negocio</h1>
+        <h1 class="ion-padding">KPIs de Negocio</h1>
         <ion-accordion-group expand="inset" :multiple="true">
           <ion-accordion value="1">
             <ion-item slot="header">
@@ -99,7 +99,7 @@
           </ion-accordion>
         </ion-accordion-group>
         <br>
-        <h1 class="ion-padding">📈 KPIs Técnicos</h1>
+        <h1 class="ion-padding">KPIs Técnicos</h1>
         <ion-accordion-group expand="inset" :multiple="true">
           <ion-accordion value="1">
             <ion-item slot="header" >
