@@ -39,7 +39,7 @@
             <div class="box"><UserRetentionChart /> </div>
           </ion-col>
           <ion-col size="12" size-lg="3">
-            <div class="box">            </div>
+            <div class="box"> <ARPUChart/></div>
           </ion-col>
         </ion-row>
 
@@ -64,7 +64,7 @@
 <script setup lang="ts">
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonGrid, IonRow, IonCol } from '@ionic/vue'
 import UserRetentionChart from '@/components/UserRetentionChart.vue';
-// Components
+import ARPUChart from '@/components/ARPUChart.vue';
 </script>
 
 <style scoped>
