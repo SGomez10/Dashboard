@@ -20,24 +20,16 @@
         <!-- Fila 1 -->
         <ion-row class="ion-row-1">
           <ion-col size="6" size-lg="3">
-            <div class="box">
-              <BarChart /> <!-- Chart.js -->
-            </div>
+            <div class="box">            </div>
           </ion-col>
           <ion-col size="6" size-lg="3">
-            <div class="box">
-              <ApexChartArpu /> <!-- ApexCharts -->
-            </div>
+            <div class="box">            </div>
           </ion-col>
           <ion-col size="6" size-lg="3">
-            <div class="box">
-              <EChartKFactor /> <!-- ECharts -->
-            </div>
+            <div class="box">            </div>
           </ion-col>
           <ion-col size="6" size-lg="3">
-            <div class="box">
-              <ApexChartDau /> <!-- ApexCharts -->
-            </div>
+            <div class="box">            </div>
           </ion-col>
         </ion-row>
 
@@ -75,13 +67,7 @@
 
 <script setup lang="ts">
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonGrid, IonRow, IonCol } from '@ionic/vue'
-
 // Components
-import BarChart from '@/components/charts/BarChart.vue'
-import ApexChartArpu from '@/components/charts/ApexChartArpu.vue'
-import ApexChartDau from '@/components/charts/ApexChartDau.vue'
-import EChartKFactor from '@/components/charts/EChartKFactor.vue'
-import EChartErrores from '@/components/charts/EChartErrores.vue'
 </script>
 
 <style scoped>
