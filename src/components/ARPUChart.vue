@@ -13,25 +13,21 @@
   
   <script setup lang="ts">
   import { ref, onMounted, nextTick } from 'vue'
-  import ApexCharts from 'apexcharts'
-  import ApexChart from 'vue3-apexcharts'
+  import apexcharts from 'vue3-apexcharts'
   
-  // Ref con tipo any para evitar error TS
   const chartRef = ref<any>(null)
   
   const series = [
     {
       name: 'Ingresos Promedio por Usuario',
-      data: [0.50, 0.55, 0.60, 0.65, 0.70, 0.75], // valores ejemplo progresivos en 6 meses
+      data: [0.50, 0.55, 0.60, 0.65, 0.70, 0.75],
     },
   ]
   
   const chartOptions = {
     chart: {
       id: 'arpu-bar',
-      toolbar: {
-        show: false,
-      },
+      toolbar: { show: false },
       animations: {
         enabled: true,
         easing: 'easeinout',
@@ -40,17 +36,13 @@
     },
     xaxis: {
       categories: ['Mes 1', 'Mes 2', 'Mes 3', 'Mes 4', 'Mes 5', 'Mes 6'],
-      title: {
-        text: 'Tiempo (Meses)',
-      },
+      title: { text: 'Tiempo (Meses)' },
     },
     yaxis: {
       min: 0,
       max: 1,
       tickAmount: 5,
-      title: {
-        text: 'Ingresos Promedio ($)',
-      },
+      title: { text: 'Ingresos Promedio ($)' },
     },
     tooltip: {
       enabled: true,
@@ -66,15 +58,8 @@
   }
   
   onMounted(async () => {
-    // Esperamos el siguiente tick para asegurarnos que el DOM está listo
     await nextTick()
-  
-    // Forzamos el resize para evitar problemas de renderizado inicial
-    if (
-      chartRef.value &&
-      chartRef.value.chart &&
-      typeof chartRef.value.chart.resize === 'function'
-    ) {
+    if (chartRef.value?.chart?.resize) {
       chartRef.value.chart.resize()
     }
   })
@@ -84,6 +69,7 @@
   .chart-container {
     width: 100%;
     height: 100%;
+    min-height: 350px;
   }
   </style>
   
