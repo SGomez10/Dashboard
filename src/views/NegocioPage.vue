@@ -36,14 +36,10 @@
         <!-- Fila 2 -->
         <ion-row class="ion-row-2">
           <ion-col size="12" size-lg="9">
-            <div class="box">
-              <EChartErrores />
-            </div>
+            <div class="box"><UserRetentionChart /> </div>
           </ion-col>
           <ion-col size="12" size-lg="3">
-            <div class="box">
-              <p style="color:white;">Otras métricas</p>
-            </div>
+            <div class="box">            </div>
           </ion-col>
         </ion-row>
 
@@ -67,6 +63,7 @@
 
 <script setup lang="ts">
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonGrid, IonRow, IonCol } from '@ionic/vue'
+import UserRetentionChart from '@/components/UserRetentionChart.vue';
 // Components
 </script>
 
@@ -89,6 +86,11 @@ ion-col {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
 }
 
 @media (min-width: 992px) {
