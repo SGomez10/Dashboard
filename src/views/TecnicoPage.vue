@@ -5,7 +5,7 @@
         <ion-buttons slot="start">
           <ion-menu-button color="primary"></ion-menu-button>
         </ion-buttons>
-        <ion-title>📈 Técnico</ion-title>
+        <ion-title>Técnico</ion-title>
       </ion-toolbar>
     </ion-header>
 
@@ -13,7 +13,7 @@
     <ion-content :fullscreen="true" class="ion-padding">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">🚀 Técnico</ion-title>
+          <ion-title size="large">Técnico</ion-title>
         </ion-toolbar>
       </ion-header>
 
@@ -40,7 +40,7 @@
             <div class="box">Columna Pequeña</div>
           </ion-col>
             <ion-col size="12" size-md="9" pull-md="3">
-              <div class="box">Columna Grande</div>
+              <div class="box"><BatteryChart/></div>
             </ion-col>
         </ion-row>
 
@@ -48,10 +48,10 @@
         <!-- 🟠 Fila 3: 2 Columnas -->
         <ion-row class="ion-row-3">
           <ion-col size="12" size-lg="4.5">
-            <div class="box">Columna 1</div>
+            <div class="box"><ServerUptimeChart/></div>
           </ion-col>
           <ion-col size="12" size-lg="4.5">
-            <div class="box">Columna 2</div>
+            <div class="box"><ErrorRateChart/></div>
           </ion-col>
           <ion-col size="12" size-lg="3">
             <div class="box">Columna 2</div>
@@ -65,6 +65,9 @@
 
 <script setup lang="ts">
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonGrid, IonRow, IonCol } from '@ionic/vue';
+import BatteryChart from '@/components/BatteryChart.vue';
+import ServerUptimeChart from '@/components/ServerUptimeChart.vue';
+import ErrorRateChart from '@/components/ErrorRateChart.vue';
 </script>
 
 
@@ -92,6 +95,11 @@ ion-col {
   display: flex;
   justify-content: center;
   align-items: start;
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
 }
 
 
