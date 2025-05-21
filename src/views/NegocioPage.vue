@@ -39,21 +39,17 @@
             <div class="box"><UserRetentionChart /> </div>
           </ion-col>
           <ion-col size="12" size-lg="3">
-            <div class="box"> <ARPUChart/></div>
+            <div class="box"> <KFactorChart/></div>
           </ion-col>
         </ion-row>
 
         <!-- Fila 3 -->
         <ion-row class="ion-row-3">
           <ion-col size="12" size-lg="6">
-            <div class="box">
-              <p style="color:white;">Objetivos SMART resumen</p>
-            </div>
+            <div class="box"> <ViralPostChart/> </div>
           </ion-col>
           <ion-col size="12" size-lg="6">
-            <div class="box">
-              <p style="color:white;">Estado técnico</p>
-            </div>
+            <div class="box"> <ARPUChart/> </div>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -65,6 +61,8 @@
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonGrid, IonRow, IonCol } from '@ionic/vue'
 import UserRetentionChart from '@/components/UserRetentionChart.vue';
 import ARPUChart from '@/components/ARPUChart.vue';
+import KFactorChart from '@/components/KFactorChart.vue';
+import ViralPostChart from '@/components/ViralPostChart.vue';
 </script>
 
 <style scoped>
