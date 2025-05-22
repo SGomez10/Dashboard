@@ -9,7 +9,6 @@ logs/
 *.log
 
 # Build output
-dist/
 build/
 public/build/
 
