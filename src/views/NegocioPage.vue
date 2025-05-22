@@ -19,17 +19,48 @@
       <ion-grid class="dashboard-grid">
         <!-- Fila 1 -->
         <ion-row class="ion-row-1">
+          <!-- Retención de usuarios -->
           <ion-col size="6" size-lg="3">
-            <div class="box">            </div>
+            <div class="box kpi-box">
+              <div class="kpi-content">
+                <h4>Retención mensual</h4>
+                <p class="kpi-value">72%</p>
+                <p class="kpi-subtext">Usuarios que regresan</p>
+              </div>
+            </div>
           </ion-col>
+
+          <!-- Ganancias del mes -->
           <ion-col size="6" size-lg="3">
-            <div class="box">            </div>
+            <div class="box kpi-box">
+              <div class="kpi-content">
+                <h4>Ingresos</h4>
+                <p class="kpi-value">€8,200</p>
+                <p class="kpi-subtext">Este mes</p>
+              </div>
+            </div>
           </ion-col>
+
+          <!-- Contenido viral generado -->
           <ion-col size="6" size-lg="3">
-            <div class="box">            </div>
+            <div class="box kpi-box">
+              <div class="kpi-content">
+                <h4>Contenido viral</h4>
+                <p class="kpi-value">378 posts</p>
+                <p class="kpi-subtext">Últimos 30 días</p>
+              </div>
+            </div>
           </ion-col>
+
+          <!-- Usuarios activos diarios -->
           <ion-col size="6" size-lg="3">
-            <div class="box">            </div>
+            <div class="box kpi-box">
+              <div class="kpi-content">
+                <h4>Usuarios activos</h4>
+                <p class="kpi-value">4,570</p>
+                <p class="kpi-subtext">DAU promedio</p>
+              </div>
+            </div>
           </ion-col>
         </ion-row>
 
@@ -49,7 +80,7 @@
             <div class="box"> <ViralPostChart/> </div>
           </ion-col>
           <ion-col size="12" size-lg="6">
-            <div class="box"> <ARPUChart/> </div>
+            <div class="box"> <DAUChart/> </div>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -63,6 +94,8 @@ import UserRetentionChart from '@/components/UserRetentionChart.vue';
 import ARPUChart from '@/components/ARPUChart.vue';
 import KFactorChart from '@/components/KFactorChart.vue';
 import ViralPostChart from '@/components/ViralPostChart.vue';
+import DAUChart from '@/components/DAUChart.vue';
+import MonthlyEarningsSparklineChart from '@/components/MonthlyEarningsSparklineChart.vue';
 </script>
 
 <style scoped>
@@ -89,6 +122,32 @@ ion-col {
 canvas {
   width: 100% !important;
   height: 100% !important;
+}
+
+.kpi-box {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.kpi-content h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #90e0ef;
+}
+
+.kpi-value {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  color: #ffffff;
+}
+
+.kpi-subtext {
+  font-size: 0.9rem;
+  color: #ccc;
 }
 
 @media (min-width: 992px) {

@@ -37,9 +37,7 @@ const option = {
     left: 'center',
     textStyle: { color: 'white' }
   },
-  tooltip: {
-    trigger: 'axis'
-  },
+  tooltip: { trigger: 'axis' },
   legend: {
     data: ['Retención de Usuarios (%)'],
     textStyle: { color: 'white' },
@@ -89,18 +87,22 @@ const resizeChart = () => {
 
 onMounted(async () => {
   await nextTick()
-  if (chartRef.value) {
-    chartInstance = echarts.init(chartRef.value)
-    chartInstance.setOption(option)
-    window.addEventListener('resize', resizeChart)
-  }
+  // Esperamos a que el layout esté completamente montado
+  setTimeout(() => {
+    if (chartRef.value) {
+      chartInstance = echarts.init(chartRef.value)
+      chartInstance.setOption(option)
+      window.addEventListener('resize', resizeChart)
+    }
+  }, 300)
 })
 
 onBeforeUnmount(() => {
   if (chartInstance) {
     chartInstance.dispose()
-    window.removeEventListener('resize', resizeChart)
+    chartInstance = null
   }
+  window.removeEventListener('resize', resizeChart)
 })
 </script>
 
@@ -108,6 +110,8 @@ onBeforeUnmount(() => {
 .chart-container {
   width: 100%;
   height: 100%;
-  min-height: 250px; /* Ajusta mínimo alto para que no sea demasiado pequeño */
+  min-height: 250px;
+  background-color: #1e1e1e;
+  border-radius: 6px;
 }
 </style>
